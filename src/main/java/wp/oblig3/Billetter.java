@@ -1,4 +1,4 @@
-package wp.oblig2;
+package wp.oblig3;
 
 public class Billetter {
     private String velgFilm;
@@ -16,6 +16,7 @@ public class Billetter {
         this.tlfnr = tlfnr;
         this.epost = epost;
     }
+    public Billetter(){}
 
     public String getVelgFilm() {
         return velgFilm;

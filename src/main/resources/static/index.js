@@ -4,7 +4,7 @@ let billetter = [];
 function kjøp(){
     let bestill;
     let antall = $("#antall").val();
-    let film = $("#velgFilm").val();
+    let velgFilm = $("#velgFilm").val();
     let fornavn = $("#fornavn").val();
     let etternavn = $("#etternavn").val();
     let tlfnr = $("#tlfnr").val();
@@ -19,7 +19,7 @@ function kjøp(){
         $("#antallFeil").html("");
         verifisering.push(0);
     }
-    if(film ==  "Velg Film"){
+    if(velgFilm ==  "Velg Film"){
         $("#ikkeValgt").html("Du må velge en film");
         verifisering.push(1);
     }else{
@@ -77,7 +77,7 @@ function kjøp(){
             inn++;
         }
         const billett = {
-            film : $("#velgFilm").val(),
+            velgFilm : $("#velgFilm").val(),
             antall : $("#antall").val(),
             fornavn : $("#fornavn").val(),
             etternavn : $("#etternavn").val(),
@@ -96,7 +96,7 @@ function kjøp(){
 
         function formaterData(Billetter) {
             ut += "<tr>";
-            ut += "<td>" + billett.film + "</td><td>" + billett.antall + "</td><td>" + billett.fornavn + "</td>" +
+            ut += "<td>" + billett.velgFilm + "</td><td>" + billett.antall + "</td><td>" + billett.fornavn + "</td>" +
                 "<td>" + billett.etternavn + "</td><td>" + billett.tlfnr + "</td><td>" + billett.epost + "</td>";
             ut += "</tr>";
             $("#bestillt").html(ut);
