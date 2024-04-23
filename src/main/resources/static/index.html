@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+    <style>
+        #antallFeil, #ikkeValgt, #ingenFornavn, #ingenEtternavn, #ingenTlfnr, #ingenEpost{
+            color: red;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Kinobilletter</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="velgFilm" class="form-label">Film: <span id="ikkeValgt" class="inline-block"></span></label>
+                    <select class="form-control" id="velgFilm">
+                        <option value="Velg Film">Velg Film</option>
+                        <option value="barbie">Barbie</option>
+                        <option value="oppenheimer">Oppenheimer</option>
+                        <option value="theCreator">The Creator</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="antall" class="form-label">Antall: <span id="antallFeil" class="inline-block"></span>
+                    </label>
+                    <input type="text" class="form-control" id="antall">
+                </div>
+                <div class="form-group">
+                    <label for="fornavn" class="form-label">Fornavn: <span id="ingenFornavn" class="inline-block"></span></label>
+                    <input type="text" class="form-control" id="fornavn">
+                </div>
+                <div class="form-group">
+                    <label for="etternavn" class="form-label">Etternavn: <span id="ingenEtternavn" class="inline-block"></span></label>
+                    <input type="text" class="form-control" id="etternavn">
+                </div>
+                <div class="form-group">
+                    <label for="tlfnr" class="form-label">Telefonnr: <span id="ingenTlfnr" class="inline-block"></span></label>
+                    <input type="text" class="form-control" id="tlfnr">
+                </div>
+                <div class="form-group">
+                    <label for="epost" class="form-label">Epost: <span id="ingenEpost" class="inline-block"></span></label>
+                    <input type="text" class="form-control" id="epost">
+                </div>
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-primary" onclick="kjøp()">Kjøp billett</button>
+                    <button type="button" class="btn btn-danger" onclick="slett()">Slett Alle Billetter</button>
+                </div>
+            </form>
+            <div class="form-group">
+                <h2>Alle billetter:</h2>
+                <table class="table table-striped" id="bestillt"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
